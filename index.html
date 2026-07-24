@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/><title>Bumpy — News Templates</title>
+<style>
+  :root{--acid:#e7ff1a;--ink:#f6f5f4;--bg:#0a0a0c;--muted:#8a8a92;--line:rgba(255,255,255,.10);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;padding:clamp(24px,5vw,64px);}
+  header{max-width:1200px;margin:0 auto 40px;}
+  .brand{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;}
+  .brand__dot{width:13px;height:13px;border-radius:50%;background:var(--acid);box-shadow:0 0 14px rgba(231,255,26,.4);}
+  .brand__text{font-weight:800;font-size:22px;letter-spacing:-.02em;}
+  h1{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin-bottom:12px;text-wrap:balance;}
+  .sub{color:var(--muted);font-size:16px;max-width:60ch;line-height:1.5;}
+  .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);align-items:start;}
+  @media (max-width:760px){.grid{grid-template-columns:1fr;}}
+  .card{display:flex;flex-direction:column;gap:16px;}
+  .card__head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;}
+  .card__title{font-size:18px;font-weight:700;letter-spacing:-.01em;}
+  .card__label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acid);}
+  .card__note{color:var(--muted);font-size:14px;line-height:1.5;}
+  .frame{position:relative;width:100%;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#101012;}
+  .frame.post{aspect-ratio:4/5;}
+  .frame.reel{aspect-ratio:9/16;max-width:360px;}
+  .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .open{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;padding:9px 16px;border:1px solid var(--line);border-radius:999px;transition:border-color .15s;}
+  .open:hover{border-color:var(--acid);}
+  footer{max-width:1200px;margin:48px auto 0;color:var(--muted);font-size:13px;}
+</style></head><body>
+  <header>
+    <div class="brand"><span class="brand__dot"></span><span class="brand__text">bumpy</span></div>
+    <h1>News template &mdash; post &amp; reel</h1>
+    <p class="sub">The chosen News Chyron direction, in both carousel-post (4:5) and reel (9:16) formats. Same type system: Anton headline, acid marker, Chivo labels, bumpy mark.</p>
+  </header>
+  <main class="grid">
+    <section class="card">
+      <div class="card__head"><span class="card__title">Carousel Post</span><span class="card__label">4:5</span></div>
+      <div class="frame post"><iframe src="news.html" title="Post" loading="lazy"></iframe></div>
+      <p class="card__note">First slide of the 10-slide carousel.</p>
+      <a class="open" href="news.html" target="_blank" rel="noopener">Open full size &rarr;</a>
+    </section>
+    <section class="card">
+      <div class="card__head"><span class="card__title">Reel</span><span class="card__label">9:16</span></div>
+      <div class="frame reel"><iframe src="reel.html" title="Reel" loading="lazy"></iframe></div>
+      <p class="card__note">Animated cover &mdash; Ken Burns photo, headline rise-in, marker swipe. Screen-record to export.</p>
+      <a class="open" href="reel.html" target="_blank" rel="noopener">Open full size &rarr;</a>
+    </section>
+  </main>
+  <footer>Internal preview &middot; Bumpy brand system</footer>
+</body></html>
